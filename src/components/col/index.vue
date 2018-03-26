@@ -11,11 +11,11 @@
       offset: [Number, String]
     },
     computed: {
-      gutter() {
+      gutter () {
         return (this.$parent && Number(this.$parent.gutter)) || 0
       },
-      style() {
-        const padding = this.$parent.gutter/2 + 'px'
+      style () {
+        const padding = this.$parent.gutter / 2 + 'px'
         return this.gutter ? {paddingLeft: padding, paddingRight: padding} : {}
       }
     }

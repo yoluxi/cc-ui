@@ -1,7 +1,7 @@
 <template>
-    <div class="cc-row" :style="style">
-      <slot></slot>
-    </div>
+  <div class="cc-row" :style="style">
+    <slot></slot>
+  </div>
 </template>
 <script>
   export default {
@@ -13,10 +13,10 @@
       }
     },
     computed: {
-        style() {
-          const margin = `-${Number(this.gutter) / 2}px`
-          return this.gutter ? {marginLeft: margin, marginRight: margin} : {}
-        }
+      style () {
+        const margin = `-${Number(this.gutter) / 2}px`
+        return this.gutter ? {marginLeft: margin, marginRight: margin} : {}
+      }
     }
   }
 </script>

@@ -29,27 +29,28 @@
   import ccRow from 'components/row/index'
 
   export default {
-    name:'Layout',
+    name: 'Layout',
     components: {
       ccCol,
       ccRow
     },
-    data() {
-      return {
-      }
+    data () {
+      return {}
     }
   }
 </script>
 <style scoped>
   .demo-container {
-    padding:0 15px;
+    padding: 0 15px;
     background-color: #f8f8f8;
     margin-top: 15px;
     height: 420px;
   }
+
   .demo-row {
     margin-bottom: 10px;
   }
+
   .demo-title {
     background-color: #ffffff;
     text-align: center;
@@ -57,6 +58,7 @@
     line-height: 46px;
     font-size: 25px;
   }
+
   .demo-subtitle {
     height: 46px;
     line-height: 46px;

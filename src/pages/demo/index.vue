@@ -18,17 +18,17 @@
     components: {
       NumberKeyboard
     },
-    data() {
+    data () {
       return {
         show: false
       }
     },
     methods: {
-      shows() {
+      shows () {
         this.show = !this.show
       },
-      showLayout() {
-          this.$router.push({path:'/layout'})
+      showLayout () {
+        this.$router.push({path: '/layout'})
       }
     }
   }
