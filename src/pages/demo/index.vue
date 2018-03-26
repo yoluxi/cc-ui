@@ -1,9 +1,14 @@
 <template>
   <div>
-    <div @click="shows">
-      {{show ? '关闭' : '弹出'}}默认键盘
+    <div>
+      <div @click="shows">
+        {{show ? '关闭' : '弹出'}}默认键盘
+      </div>
+      <div @click="showLayout">
+        layout
+      </div>
+      <number-keyboard :show="show" close-button-text="完成"></number-keyboard>
     </div>
-    <number-keyboard :show="show" close-button-text="完成"></number-keyboard>
   </div>
 </template>
 <script>
@@ -21,6 +26,9 @@
     methods: {
       shows() {
         this.show = !this.show
+      },
+      showLayout() {
+          this.$router.push({path:'/layout'})
       }
     }
   }
