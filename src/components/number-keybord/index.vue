@@ -52,30 +52,30 @@
       }
     },
 
-    mounted() {
+    mounted () {
       this.handler(true)
     },
 
-    destroyed() {
+    destroyed () {
       this.handler(false)
     },
 
-    activated() {
+    activated () {
       this.handler(true)
     },
 
-    deactivated() {
+    deactivated () {
       this.handler(false)
     },
 
-    data() {
+    data () {
       return {
         active: -1
       }
     },
 
     watch: {
-      show() {
+      show () {
         if (!this.transition) {
           this.$emit(this.show ? 'show' : 'hide')
         }
@@ -83,7 +83,7 @@
     },
 
     computed: {
-      keys() {
+      keys () {
         const keys = []
         for (let i = 0; i < 12; i++) {
           const key = i === 10 ? 0 : i < 9 ? i + 1 : i === 9 ? this.extraKey : ''
@@ -92,7 +92,7 @@
         return keys
       },
 
-      style() {
+      style () {
         return {
           zIndex: this.zIndex
         }
@@ -100,14 +100,14 @@
     },
 
     methods: {
-      handler(action) {
+      handler (action) {
         if (action !== this.handlerStatus) {
           this.handlerStatus = action
           document.body[(action ? 'add' : 'remove') + 'EventListener']('touchstart', this.blurKeyboard)
         }
       },
 
-      focus(event) {
+      focus (event) {
         this.active = parseInt(event.target.dataset.key)
         if (this.active === 11) {
           this.$emit('delete')
@@ -119,19 +119,19 @@
         }
       },
 
-      blurKey() {
+      blurKey () {
         this.active = -1
       },
 
-      blurKeyboard() {
+      blurKeyboard () {
         this.$emit('blur')
       },
 
-      onAnimationEnd() {
+      onAnimationEnd () {
         this.$emit(this.show ? 'show' : 'hide')
       }
     }
-  };
+  }
 </script>
 
 <style lang="sass">

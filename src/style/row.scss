@@ -1,0 +1,10 @@
+@import "./common/var.scss";
+
+.cc-row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+

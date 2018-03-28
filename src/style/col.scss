@@ -1,0 +1,25 @@
+@import "./common/var.scss";
+
+.cc-col {
+  float: left;
+  box-sizing: border-box;
+  color:$white;
+  text-align: center;
+  line-height: 30px;
+  background-clip: content-box !important;
+  &:nth-child(odd) {
+    background: #39a9ed;
+  }
+  &:nth-child(even) {
+    background: #66c6f2;
+  }
+}
+
+@for $i from 1 through 24 {
+  .cc-col-span-#{$i} {
+    width: $i * 100% / 24;
+  }
+  .cc-col-offset-#{$i} {
+    margin-left: $i * 100% / 24;
+  }
+}
