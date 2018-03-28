@@ -7,6 +7,9 @@
       <div @click="showLayout">
         layout
       </div>
+      <div @click="showBadge">
+        badge
+      </div>
       <number-keyboard :show="show" close-button-text="完成"></number-keyboard>
     </div>
   </div>
@@ -29,6 +32,9 @@
       },
       showLayout () {
         this.$router.push({path: '/layout'})
+      },
+      showBadge () {
+        this.$router.push({path: '/badge'})
       }
     }
   }

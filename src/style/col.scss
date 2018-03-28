@@ -15,7 +15,7 @@
   }
 }
 
-@for $i from 1 to 24 {
+@for $i from 1 through 24 {
   .cc-col-span-#{$i} {
     width: $i * 100% / 24;
   }
